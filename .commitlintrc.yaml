@@ -3,3 +3,6 @@ extends:
 rules:
   # so that long URLs e.g. GitHub can be included in the commit message body
   body-max-line-length: [2, "always", ["Infinity"]]
+#
+# Copyright Keith Maxwell
+# SPDX-License-Identifier: CC0-1.0
