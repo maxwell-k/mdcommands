@@ -1,0 +1,7 @@
+export const snapshot = {};
+
+snapshot[`snapshot test against example.md 1`] = `
+"deno --version
+fzf --version
+echo 1 2 3"
+`;
