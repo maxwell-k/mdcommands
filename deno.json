@@ -1,8 +1,12 @@
 {
   "tasks": {
+    "lint": "deno lint .",
     "test": {
       "description": "Run test suite with coverage measurement",
-      "command": "deno test --allow-read=__snapshots__ --allow-read=example.md --coverage && deno coverage && deno coverage --html"
+      "command": "deno test --allow-read=__snapshots__ --allow-read=example.md --coverage && deno coverage && deno coverage --html",
+      "dependencies": [
+        "lint"
+      ]
     }
   },
   "imports": {
