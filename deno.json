@@ -8,11 +8,5 @@
         "lint"
       ]
     }
-  },
-  "imports": {
-    "@std/assert": "jsr:@std/assert@1",
-    "@std/fs": "jsr:@std/fs@1/eol",
-    "@std/testing": "jsr:@std/testing@1",
-    "marked": "npm:marked@14"
   }
 }
