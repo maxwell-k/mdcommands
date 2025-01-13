@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: MPL-2.0
 // Copyright 2024 Keith Maxwell
 import { main, mdcommands } from "./main.ts";
-import { assertEquals } from "@std/assert";
-import { assertSnapshot } from "@std/testing/snapshot";
+import { assertEquals } from "jsr:@std/assert@1";
+import { assertSnapshot } from "jsr:@std/testing@1/snapshot";
 
 Deno.test("indented code block test", () => {
   const result = mdcommands(`
