@@ -9,3 +9,9 @@ Command to update the [snapshot] tests:
     deno test --allow-all -- --update
 
 [snapshot]: https://jsr.io/@std/testing/doc/snapshot
+
+<!--
+CONTRIBUTING.md
+Copyright Keith Maxwell
+SPDX-License-Identifier: CC0-1.0
+-->
