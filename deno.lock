@@ -8,7 +8,7 @@
     "jsr:@std/internal@^1.0.5": "1.0.5",
     "jsr:@std/path@^1.0.8": "1.0.8",
     "jsr:@std/testing@1": "1.0.9",
-    "npm:marked@14": "14.1.4"
+    "npm:marked@15": "15.0.6"
   },
   "jsr": {
     "@std/assert@1.0.10": {
@@ -40,8 +40,8 @@
     }
   },
   "npm": {
-    "marked@14.1.4": {
-      "integrity": "sha512-vkVZ8ONmUdPnjCKc5uTRvmkRbx4EAi2OkTOXmfTDhZz3OFqMNBM1oTTWwTr4HY4uAEojhzPf+Fy8F1DWa3Sndg=="
+    "marked@15.0.6": {
+      "integrity": "sha512-Y07CUOE+HQXbVDCGl3LXggqJDbXDP2pArc2C1N1RRMN0ONiShoSsIInMd5Gsxupe7fKLpgimTV+HOJ9r7bA+pg=="
     }
   }
 }
