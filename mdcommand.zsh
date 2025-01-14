@@ -7,11 +7,12 @@ mdcommand() {
   local block="$(command mdcommands $@ | fzf)"
 
   printf '%% %s\n' "$block"
-  read -q "REPLY?Abort? "
+  read -s -q "REPLY?Abort? "
   if [ "$REPLY" = "n" ] ; then
     print -S "$block"
+    printf '\n'
     eval "$block"
   else
-    printf "Aborted."
+    printf '\nAborted.\n'
   fi
 }
