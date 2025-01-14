@@ -36,6 +36,8 @@ Command to run a code block from `example.md` and add it to your ZSH history:
 
     mdcommand example.md
 
+Press `y` or `Y` to abort and any other key to proceed.
+
 ## Dependencies
 
 - [Deno](https://deno.com/)
