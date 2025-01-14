@@ -20,8 +20,8 @@
 
 Command to install:
 
-    deno install --global --allow-read \
-        https://raw.githubusercontent.com/maxwell-k/mdcommands/main/mdcommands.ts
+    deno install --global --name mdcommands --allow-read \
+        https://raw.githubusercontent.com/maxwell-k/mdcommands/main/main.ts
 
 Command to print code blocks from [example.md](/example.md):
 
