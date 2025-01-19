@@ -4,7 +4,7 @@
 [ -n "${ZSH_VERSION:-}" ] || return 0
 
 mdcommand() {
-  local block="$(command mdcommands $@ | fzf)"
+  local block="$(command mdcommands $@ | fzf --layout=reverse)"
 
   printf '%% %s\n' "$block"
   read -s -q "REPLY?Abort? "
