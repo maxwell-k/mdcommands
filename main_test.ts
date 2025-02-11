@@ -40,10 +40,12 @@ Paragraph:
   assertEquals(result, ["echo 1 2 3", "echo 4"]);
 });
 
-Deno.test(
-  "snapshot test against example.md",
-  async function (t): Promise<void> {
-    const result: string = main(["example.md"]);
-    await assertSnapshot<string>(t, result);
-  },
+[["example.md"], []].forEach((args) =>
+  Deno.test(
+    `snapshot test against ${args.length ? args : "defaults"}`,
+    async function (t): Promise<void> {
+      const result: string = main(args);
+      await assertSnapshot<string>(t, result);
+    },
+  )
 );

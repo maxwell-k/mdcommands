@@ -20,7 +20,7 @@ export function mdcommands(markdown: string): string[] {
 }
 
 export function main(args: string[]): string {
-  const [file] = args;
+  const [file] = args.length ? args : ["README.md"];
   const result: string[] = mdcommands(Deno.readTextFileSync(file));
   return result.join(EOL);
 }
