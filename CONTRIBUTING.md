@@ -21,6 +21,12 @@ Command to update the [snapshot] tests:
 
 [snapshot]: https://jsr.io/@std/testing/doc/snapshot
 
+## Install locally
+
+Command to install from a local clone:
+
+    deno install --global --name mdcommands --allow-read $PWD/main.ts
+
 <!--
 CONTRIBUTING.md
 Copyright Keith Maxwell

@@ -18,7 +18,7 @@
 
 ## Example usage
 
-Command to install:
+Command to install from GitHub:
 
     deno install --global --name mdcommands --allow-read \
         https://raw.githubusercontent.com/maxwell-k/mdcommands/main/main.ts
