@@ -5,3 +5,9 @@ snapshot[`snapshot test against example.md 1`] = `
 fzf --version
 echo 1 2 3"
 `;
+
+snapshot[`snapshot test against defaults 1`] = `
+"deno install --global --name mdcommands --allow-read https://raw.githubusercontent.com/maxwell-k/mdcommands/main/main.ts
+mdcommands example.md
+mdcommand example.md"
+`;
