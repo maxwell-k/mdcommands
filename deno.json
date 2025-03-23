@@ -1,11 +1,13 @@
 {
   "tasks": {
     "lint": "deno lint .",
+    "clean": "rm -rf coverage",
     "test": {
       "description": "Run test suite with coverage measurement",
       "command": "deno test --allow-read=__snapshots__,example.md,README.md,.tmp --allow-write=.tmp --coverage && deno coverage && deno coverage --html",
       "dependencies": [
-        "lint"
+        "lint",
+        "clean"
       ]
     }
   }
