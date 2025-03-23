@@ -5,18 +5,19 @@ import { main } from "./dislodge.ts";
 import { assertEquals } from "jsr:@std/assert@1";
 import { join } from "jsr:@std/path/join";
 
-const tmpdir = "./.tmp";
-const fixture_one = "<!-- embedme example.txt -->\n" +
-  "\n" +
-  "```\n" +
-  "1\n" +
-  "```\n";
 Deno.test("end to end test", async (t) => {
-  const directory = await Deno.makeTempDir({ dir: tmpdir });
+  const directory = await Deno.makeTempDir({ dir: "./.tmp" });
   const input = join(directory, "README.md");
   const output = join(directory, "example.txt");
   await t.step(`write ${input}`, async () => {
-    await Deno.writeTextFile(input, fixture_one);
+    await Deno.writeTextFile(
+      input,
+      "<!-- embedme example.txt -->\n" +
+        "\n" +
+        "```\n" +
+        "1\n" +
+        "```\n",
+    );
   });
   await t.step(`process ${input}`, () => {
     const result: string = main([input]);
@@ -27,7 +28,16 @@ Deno.test("end to end test", async (t) => {
     const contents = await Deno.readTextFile(output);
     assertEquals(contents, "1\n");
   });
+  await t.step(`check 2 files in ${directory}`, async () => {
+    let files = 0;
+    for await (const _ of Deno.readDir(directory)) files++;
+    assertEquals(files, 2);
+  });
   await t.step(`clean up ${directory}`, async () => {
     await Deno.remove(directory, { recursive: true });
   });
+});
+Deno.test("end to end test on current working directory", () => {
+  const result: string = main([]);
+  assertEquals(result, "");
 });
