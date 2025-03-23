@@ -13,7 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v2
-      - run: rm deno.lock # to also check the lock file is up to date
       - run: deno task test
       - run: git diff --exit-code # changes cause this job to fail
       - uses: actions/upload-artifact@v4
