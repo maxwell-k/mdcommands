@@ -7,7 +7,7 @@ mdcommand() {
   local block="$(command mdcommands $@ | fzf --layout=reverse)"
 
   printf '%% %s\n' "$block"
-  read -s -q "REPLY?Abort? "
+  read -s -q "REPLY?Press y to abort or any other key to continue."
   if [ "$REPLY" = "n" ] ; then
     print -S "$block"
     printf '\n'
