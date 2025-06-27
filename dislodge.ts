@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MPL-2.0
 // Copyright 2024 Keith Maxwell
 
-import { marked, Token } from "npm:marked@15";
+import { marked, Token } from "npm:marked@16";
 import { EOL } from "jsr:@std/fs@1/eol";
 import { dirname } from "jsr:@std/path";
 import { join } from "jsr:@std/path/join";
