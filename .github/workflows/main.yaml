@@ -1,5 +1,5 @@
-# .github/workflows/test.yaml
-# Copyright 2024 Keith Maxwell
+# .github/workflows/main.yaml
+# Copyright 2025 Keith Maxwell
 # SPDX-License-Identifier: CC0-1.0
 
 on: # yamllint disable-line rule:truthy
