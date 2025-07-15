@@ -20,3 +20,6 @@ jobs:
       - uses: astral-sh/setup-uv@bd01e18f51369d5a26f1651c3cb451d3417e3bba # v6
         with: { enable-cache: false }
       - run: uv tool run reuse lint
+  renovate-config-validator:
+    # yamllint disable-line rule:line-length
+    uses: maxwell-k/dotlocalslashbin/.github/workflows/renovate.yaml@cb60f00144f887cd482609b344ae8ed78feadeed # v0.0.19
