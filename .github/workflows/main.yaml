@@ -23,3 +23,11 @@ jobs:
   renovate-config-validator:
     # yamllint disable-line rule:line-length
     uses: maxwell-k/dotlocalslashbin/.github/workflows/renovate.yaml@cb60f00144f887cd482609b344ae8ed78feadeed # v0.0.19
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - run:
+          podman run "--volume=$PWD:/src:z" --workdir=/src commitlint/commitlint
+          --verbose --from=origin/main --to=HEAD
