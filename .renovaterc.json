@@ -10,8 +10,8 @@
     {
       "customType": "regex",
       "datasourceTemplate": "npm",
-      "fileMatch": [
-        "^*.ts$"
+      "managerFilePatterns": [
+        "/^*.ts$/"
       ],
       "matchStrings": [
         "import .+ from \"npm:(?<depName>.+?)@(?<currentValue>.+?)\";"
