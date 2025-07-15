@@ -17,5 +17,14 @@
         "import .+ from \"npm:(?<depName>.+?)@(?<currentValue>.+?)\";"
       ]
     }
+  ],
+  "packageRules": [
+    {
+      "description": "Automerge upgrades to GitHub Actions",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "automerge": true
+    }
   ]
 }
