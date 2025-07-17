@@ -17,7 +17,7 @@ jobs:
       - run: git diff --exit-code # changes cause this job to fail
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with: { path: coverage/html/ }
-      - uses: astral-sh/setup-uv@bd01e18f51369d5a26f1651c3cb451d3417e3bba # v6
+      - uses: astral-sh/setup-uv@05273c154d09957eb9a2377d9c988fbda431d1c5 # v6
         with: { enable-cache: false }
       - run: uv tool run reuse lint
   renovate-config-validator:
