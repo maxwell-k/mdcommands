@@ -2,6 +2,10 @@
   "tasks": {
     "lint": "deno lint .",
     "clean": "rm -rf coverage",
+    "install": {
+      "description": "Install dependencies for all entry points",
+      "command": "deno install --frozen=false --entrypoint main.ts && deno install --frozen=false --entrypoint main_test.ts && deno install --frozen=false --entrypoint dislodge.ts && deno install --frozen=false --entrypoint dislodge_test.ts"
+    },
     "test": {
       "description": "Run test suite with coverage measurement",
       "command": "deno test --allow-read=__snapshots__,example.md,README.md,.tmp --allow-write=.tmp --coverage",
