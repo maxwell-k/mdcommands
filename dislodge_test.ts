@@ -5,7 +5,7 @@ import { main } from "./dislodge.ts";
 import { assertEquals } from "jsr:@std/assert";
 import { join } from "jsr:@std/path/join";
 
-Deno.test("end to end test", async (t) => {
+Deno.test("end to end test with fenced code block", async (t) => {
   const directory = await Deno.makeTempDir({ dir: "./.tmp" });
   const input = join(directory, "README.md");
   const output = join(directory, "example.txt");
