@@ -1,9 +1,9 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@std/assert@1": "1.0.13",
+    "jsr:@std/assert@*": "1.0.13",
     "jsr:@std/assert@^1.0.13": "1.0.13",
-    "jsr:@std/fs@1": "1.0.19",
+    "jsr:@std/fs@*": "1.0.19",
     "jsr:@std/fs@^1.0.18": "1.0.19",
     "jsr:@std/internal@^1.0.6": "1.0.9",
     "jsr:@std/internal@^1.0.8": "1.0.9",
@@ -11,7 +11,7 @@
     "jsr:@std/path@*": "1.1.1",
     "jsr:@std/path@^1.1.0": "1.1.1",
     "jsr:@std/path@^1.1.1": "1.1.1",
-    "jsr:@std/testing@1": "1.0.14",
+    "jsr:@std/testing@*": "1.0.14",
     "npm:marked@16": "16.0.0"
   },
   "jsr": {
