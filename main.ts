@@ -25,4 +25,5 @@ export function main(args: string[]): string {
   return result.join(EOL);
 }
 
+// deno-coverage-ignore
 if (import.meta.main) console.log(main(Deno.args));
