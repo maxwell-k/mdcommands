@@ -13,15 +13,17 @@ const marker = /<!--\s*?embedme[ ]+?(\S+?)\s*?-->/;
 export function main(args: string[]): string {
   const [file] = args.length ? args : ["README.md"];
   const markdown: string = Deno.readTextFileSync(file);
-  const result: string[] = [];
+
+  type Block = [
+    path: string,
+    data: string,
+  ];
+  const blocks: Block[] = [];
 
   let path: string | null = null;
   const walkTokens = (token: Token) => {
     if (path && token.type === "code") {
-      // use replace to guarantee a string, match may return null
-      const contents = token.raw.replace(/^```.*\n/, "").replace(/```\n$/, "");
-      Deno.writeTextFileSync(path, contents);
-      result.push(`Wrote ${contents.length} characters to ${path}`);
+      blocks.push([path, token.text + "\n"]);
       path = null;
     } else if (token.type === "html") {
       const match = token.raw.match(marker);
@@ -31,7 +33,11 @@ export function main(args: string[]): string {
 
   marked.use({ walkTokens });
   marked.parse(markdown);
-  return result.join(EOL);
+
+  for (const block of blocks) Deno.writeTextFileSync(...block);
+  return blocks.map(([path, data]) =>
+    `Wrote ${data.length} characters to ${path}`
+  ).join(EOL);
 }
 
 // deno-coverage-ignore
