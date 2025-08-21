@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MPL-2.0
 // Copyright 2025 Keith Maxwell
 import { main } from "./dislodge.ts";
-import { assertEquals } from "jsr:@std/assert@1";
+import { assertEquals } from "jsr:@std/assert";
 import { join } from "jsr:@std/path/join";
 
 Deno.test("end to end test", async (t) => {

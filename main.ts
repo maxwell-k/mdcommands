@@ -3,7 +3,7 @@
 // Copyright 2024 Keith Maxwell
 
 import { marked, Token } from "npm:marked@16";
-import { EOL } from "jsr:@std/fs@1/eol";
+import { EOL } from "jsr:@std/fs/eol";
 
 export function mdcommands(markdown: string): string[] {
   const walkTokens = (token: Token) => {
