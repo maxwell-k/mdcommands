@@ -5,14 +5,19 @@
 
 mdcommand() {
   local block="$(command mdcommands $@ | fzf --layout=reverse)"
+  if [ -z "$block" ] ; then
+    printf '\nInterrupted.\n'
+    return 1
+  fi
 
   printf '%% %s\n' "$block"
-  read -s -q "REPLY?Press y to abort or any other key to continue."
-  if [ "$REPLY" = "n" ] ; then
-    print -S "$block"
-    printf '\n'
-    eval "$block"
-  else
+  read -s -k "REPLY?Press [Space] to continue or any other key to abort."
+  if [ "$REPLY" != " " ] ; then
     printf '\nAborted.\n'
+    return 1
   fi
+
+  print -S "$block"
+  printf '\n'
+  eval "$block"
 }
