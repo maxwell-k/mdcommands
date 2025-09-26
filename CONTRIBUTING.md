@@ -11,15 +11,17 @@ To run `commitlint` locally I recommend Podman, see
 
 ## Test suite
 
-Command to run the test suite:
+Command to run the linter and test suite:
 
-    deno task test
+    deno task all
 
 Command to update the [snapshot] tests:
 
-    deno test --allow-all -- --update
+    cd mdcommands && deno test -P --allow-write -- --update
 
 [snapshot]: https://jsr.io/@std/testing/doc/snapshot
+
+Please maintain branch and line test coverage at 100%.
 
 ## Install locally
 

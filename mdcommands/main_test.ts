@@ -1,9 +1,10 @@
-// mdcommands_test.ts
+// mdcommands/mdcommands_test.ts
 // SPDX-License-Identifier: MPL-2.0
 // Copyright 2024 Keith Maxwell
 import { main, mdcommands } from "./main.ts";
-import { assertEquals } from "jsr:@std/assert";
-import { assertSnapshot } from "jsr:@std/testing/snapshot";
+import { assertEquals } from "jsr:@std/assert@^1.0.14";
+import { assertSnapshot } from "jsr:@std/testing@^1.0.15/snapshot";
+import { join } from "jsr:@std/path@^1.1.2";
 
 Deno.test("indented code block test", () => {
   const result = mdcommands(`
@@ -40,12 +41,24 @@ Paragraph:
   assertEquals(result, ["echo 1 2 3", "echo 4"]);
 });
 
-[["example.md"], []].forEach((args) =>
-  Deno.test(
-    `snapshot test against ${args.length ? args : "defaults"}`,
-    async function (t): Promise<void> {
-      const result: string = main(args);
+Deno.test(
+  `snapshot test against example.md`,
+  async function (t): Promise<void> {
+    const result: string = main([
+      join(import.meta.dirname as string, "example.md"),
+    ]);
+    await assertSnapshot<string>(t, result);
+  },
+);
+
+Deno.test(
+  `snapshot test against defaults`,
+  async function (t): Promise<void> {
+    const result: string = main([]);
+    if (Deno.cwd() == import.meta.dirname) {
       await assertSnapshot<string>(t, result);
-    },
-  )
+    } else { // to allow running tests from the repository root
+      assertEquals(result, "");
+    }
+  },
 );

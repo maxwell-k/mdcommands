@@ -7,7 +7,7 @@ echo 1 2 3"
 `;
 
 snapshot[`snapshot test against defaults 1`] = `
-"deno install --global --name mdcommands --allow-read https://raw.githubusercontent.com/maxwell-k/mdcommands/main/main.ts
+"deno install --global --name mdcommands --allow-read https://raw.githubusercontent.com/maxwell-k/mdcommands/main/mdcommands/main.ts
 mdcommands example.md
 mdcommand example.md"
 `;

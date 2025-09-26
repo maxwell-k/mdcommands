@@ -1,11 +1,10 @@
-// main.ts
+// dislodge/main.ts
 // SPDX-License-Identifier: MPL-2.0
-// Copyright 2024 Keith Maxwell
+// Copyright 2025 Keith Maxwell
 
-import { marked, Token } from "npm:marked@16";
-import { EOL } from "jsr:@std/fs/eol";
-import { dirname } from "jsr:@std/path";
-import { join } from "jsr:@std/path/join";
+import { marked, Token } from "npm:marked@^16.3.0";
+import { EOL } from "jsr:@std/fs@^1.0.19";
+import { dirname, join } from "jsr:@std/path@^1.1.2";
 
 // https://github.com/zakhenry/embedme/blob/master/src/embedme.lib.ts#L458
 const marker = /<!--\s*?embedme[ ]+?(\S+?)\s*?-->/;
