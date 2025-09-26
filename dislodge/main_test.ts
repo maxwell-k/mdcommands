@@ -1,12 +1,14 @@
-// dislodge_test.ts
+// dislodge/main_test.ts
 // SPDX-License-Identifier: MPL-2.0
 // Copyright 2025 Keith Maxwell
-import { main } from "./dislodge.ts";
-import { assertEquals } from "jsr:@std/assert";
-import { join } from "jsr:@std/path/join";
+import { main } from "./main.ts";
+import { assertEquals } from "jsr:@std/assert@^1.0.14";
+import { join } from "jsr:@std/path@^1.1.2";
+
+const tmp = join(import.meta.dirname as string, ".tmp");
 
 Deno.test("end to end test with a fenced code block", async (t) => {
-  const directory = await Deno.makeTempDir({ dir: "./.tmp" });
+  const directory = await Deno.makeTempDir({ dir: tmp });
   const input = join(directory, "README.md");
   const output = join(directory, "example.txt");
   await t.step(`write ${input}`, async () => {
@@ -38,7 +40,7 @@ Deno.test("end to end test with a fenced code block", async (t) => {
   });
 });
 Deno.test("end to end test with indented code block", async (t) => {
-  const directory = await Deno.makeTempDir({ dir: "./.tmp" });
+  const directory = await Deno.makeTempDir({ dir: tmp });
   const input = join(directory, "README.md");
   const output = join(directory, "example.txt");
   await t.step(`write ${input}`, async () => {
@@ -63,7 +65,7 @@ Deno.test("end to end test with indented code block", async (t) => {
     await Deno.remove(directory, { recursive: true });
   });
 });
-Deno.test("end to end test on current working directory", () => {
+Deno.test("end to end test with default arguments", () => {
   const result: string = main([]);
   assertEquals(result, "");
 });

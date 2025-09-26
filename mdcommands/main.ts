@@ -1,9 +1,9 @@
-// main.ts
+// mdcommands/main.ts
 // SPDX-License-Identifier: MPL-2.0
 // Copyright 2024 Keith Maxwell
 
-import { marked, Token } from "npm:marked@16";
-import { EOL } from "jsr:@std/fs/eol";
+import { marked, Token } from "npm:marked@^16.3.0";
+import { EOL } from "jsr:@std/fs@^1.0.19";
 
 export function mdcommands(markdown: string): string[] {
   const walkTokens = (token: Token) => {
