@@ -30,13 +30,7 @@ Command to print code blocks from [example.md](./example.md):
 ### ZSH integration
 
 Install as above, then source the [mdcommand.zsh](./mdcommand.zsh) file, perhaps
-in your `~/.zshrc`.
-
-Command to run a code block from `example.md` and add it to your ZSH history:
-
-    mdcommand example.md
-
-Press the space bar to proceed or any other key to abort.
+in your `~/.zshrc`. This binds a two line shell function to Ctrl+N.
 
 <!--
 mdcommnds/README.md
