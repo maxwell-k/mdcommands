@@ -2,6 +2,11 @@
 
 Opposite of <https://github.com/zakhenry/embedme>.
 
+Command to install from GitHub:
+
+    deno install --global --allow-read --allow-write \
+        https://raw.githubusercontent.com/maxwell-k/mdcommands/main/dislodge/main.ts
+
 <!--
 dislodge/README.md
 Copyright Keith Maxwell
