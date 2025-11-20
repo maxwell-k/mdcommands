@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MPL-2.0
 // Copyright 2024 Keith Maxwell
 
-import { marked, Token } from "npm:marked@^16.3.0";
+import { marked, Token } from "npm:marked@17";
 import { EOL } from "jsr:@std/fs@^1.0.19";
 
 export function mdcommands(markdown: string): string[] {
