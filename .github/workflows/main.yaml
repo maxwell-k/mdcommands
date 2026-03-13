@@ -19,7 +19,7 @@ jobs:
       # yamllint disable-line rule:line-length
       - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
         with: { path: coverage/html/ }
-      - uses: astral-sh/setup-uv@6ee6290f1cbc4156c0bdd66691b2c144ef8df19a # v7
+      - uses: astral-sh/setup-uv@e06108dd0aef18192324c70427afc47652e63a82 # v7
         with: { enable-cache: false }
       - run: uv tool run reuse lint
   renovate-config-validator:
