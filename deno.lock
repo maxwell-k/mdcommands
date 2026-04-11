@@ -9,7 +9,7 @@
     "jsr:@std/path@^1.1.1": "1.1.2",
     "jsr:@std/path@^1.1.2": "1.1.2",
     "jsr:@std/testing@^1.0.15": "1.0.15",
-    "npm:marked@17": "17.0.1"
+    "npm:marked@18": "18.0.0"
   },
   "jsr": {
     "@std/assert@1.0.14": {
@@ -45,8 +45,8 @@
     }
   },
   "npm": {
-    "marked@17.0.1": {
-      "integrity": "sha512-boeBdiS0ghpWcSwoNm/jJBwdpFaMnZWRzjA6SkUMYb40SVaN1x7mmfGKp0jvexGcx+7y2La5zRZsYFZI6Qpypg==",
+    "marked@18.0.0": {
+      "integrity": "sha512-2e7Qiv/HJSXj8rDEpgTvGKsP8yYtI9xXHKDnrftrmnrJPaFNM7VRb2YCzWaX4BP1iCJ/XPduzDJZMFoqTCcIMA==",
       "bin": true
     }
   }
