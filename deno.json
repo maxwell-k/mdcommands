@@ -19,7 +19,7 @@
       ]
     },
     "lint": "deno lint .",
-    "test": "deno test -P --coverage",
+    "test": "deno test --permission-set --coverage",
     "all": {
       "dependencies": ["install", "lint", "test"]
     }
