@@ -10,7 +10,8 @@ export function mdcommands(markdown: string): string[] {
     if (token.type === "code") {
       const text = token.text
         .replace(/\\\n/g, "")
-        .replace(/ +/g, " ");
+        .replace(/ +/g, " ")
+        .trimEnd();
       result.push(...text.split(/\r?\n/));
     }
   };
