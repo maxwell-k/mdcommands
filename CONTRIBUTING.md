@@ -17,7 +17,7 @@ Command to run the linter and test suite:
 
 Command to update the [snapshot] tests:
 
-    cd mdcommands && deno test -P --allow-write -- --update
+    cd mdcommands && deno test --permission-set --allow-write -- --update
 
 [snapshot]: https://jsr.io/@std/testing/doc/snapshot
 
