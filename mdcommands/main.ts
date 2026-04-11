@@ -8,7 +8,9 @@ import { EOL } from "jsr:@std/fs@^1.0.19";
 export function mdcommands(markdown: string): string[] {
   const walkTokens = (token: Token) => {
     if (token.type === "code") {
-      const text = token.text.replaceAll("\\\n", "").replaceAll(/ +/g, " ");
+      const text = token.text
+        .replace(/\\\n/g, "")
+        .replace(/ +/g, " ");
       result.push(...text.split(/\r?\n/));
     }
   };
