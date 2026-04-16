@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with: { persist-credentials: false }
       - uses: denoland/setup-deno@v2
       - run: deno --version
       - run: deno task all
@@ -29,7 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-        with: { fetch-depth: 0 }
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - run:
           podman run "--volume=$PWD:/src:z" --workdir=/src commitlint/commitlint
           --verbose --from=origin/main --to=HEAD
