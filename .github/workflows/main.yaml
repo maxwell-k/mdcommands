@@ -15,7 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with: { persist-credentials: false }
-      - uses: denoland/setup-deno@v2
+      # yamllint disable-line rule:line-length
+      - uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
       - run: deno --version
       - run: deno task all
       - run: git diff --exit-code # changes cause this job to fail
