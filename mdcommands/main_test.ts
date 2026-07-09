@@ -1,4 +1,4 @@
-// mdcommands/mdcommands_test.ts
+// mdcommands/main_test.ts
 // SPDX-License-Identifier: MPL-2.0
 // Copyright 2024 Keith Maxwell
 import { main, mdcommands } from "./main.ts";
