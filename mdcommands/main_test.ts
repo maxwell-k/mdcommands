@@ -3,7 +3,6 @@
 // Copyright 2024 Keith Maxwell
 import { main, mdcommands } from "./main.ts";
 import { assertEquals } from "jsr:@std/assert@^1.0.14";
-import { assertSnapshot } from "jsr:@std/testing@^1.0.15/snapshot";
 import { join } from "jsr:@std/path@^1.1.2";
 
 Deno.test("indented code block test", () => {
@@ -47,7 +46,7 @@ Deno.test(
     const result: string = main([
       join(import.meta.dirname as string, "example.md"),
     ]);
-    await assertSnapshot<string>(t, result);
+    await t.assertSnapshot(result);
   },
 );
 
@@ -56,7 +55,7 @@ Deno.test(
   async function (t): Promise<void> {
     const result: string = main([]);
     if (Deno.cwd() == import.meta.dirname) {
-      await assertSnapshot<string>(t, result);
+      await t.assertSnapshot(result);
     } else { // to allow running tests from the repository root
       assertEquals(result, "");
     }
