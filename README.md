@@ -4,6 +4,7 @@ This repository contains two command line utilities for working with markdown:
 
 1. [mdcommands](./mdcommands/README.md)
 2. [dislodge](./dislodge/README.md)
+3. [mdsum](./mdsum/README.md)
 
 ## Dependencies
 
