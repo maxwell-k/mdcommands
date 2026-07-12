@@ -5,6 +5,16 @@
   "customManagers": [
     {
       "customType": "regex",
+      "matchStrings": [
+        "{ deno-version: (?<currentValue>.+?) } # see [.]renovaterc[.]json"
+      ],
+      "managerFilePatterns": ["/^[.]github[/]workflows[/]main[.]yaml$/"],
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "deno",
+      "packageNameTemplate": "denoland/deno"
+    },
+    {
+      "customType": "regex",
       "datasourceTemplate": "npm",
       "managerFilePatterns": ["/^*.ts$/"],
       "matchStrings": [
@@ -13,6 +23,13 @@
     }
   ],
   "packageRules": [
+    {
+      "description": "Ignore Deno versions picked up by github-actions from npm; Deno upstream doesn't always publish versions to npm",
+      "matchPackageNames": ["deno"],
+      "matchDatasources": ["npm"],
+      "matchManagers": ["github-actions"],
+      "enabled": false
+    },
     {
       "description": "Automerge upgrades to GitHub Actions",
       "matchManagers": ["github-actions"],
