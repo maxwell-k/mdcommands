@@ -34,6 +34,11 @@
       "description": "Automerge upgrades to GitHub Actions",
       "matchManagers": ["github-actions"],
       "automerge": true
+    },
+    {
+      "automerge": true,
+      "description": "Automerge Deno upgrades",
+      "matchPackageNames": ["denoland/deno"]
     }
   ]
 }
