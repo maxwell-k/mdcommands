@@ -6,7 +6,7 @@ Sum the integers in the first column of all markdown tables in a file.
 
 Command to install from the root of a local repository:
 
-    deno install --global --allow-read --no-config mdsum
+    deno install --global --allow-read --no-config mdsum/main.ts
 
 Command to install from GitHub:
 
