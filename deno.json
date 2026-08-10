@@ -9,13 +9,17 @@
     "install_dislodge_main_test": "deno install --frozen=false --entrypoint dislodge/main_test.ts",
     "install_mdcommands_main": "deno install --frozen=false --entrypoint mdcommands/main.ts",
     "install_mdcommands_main_test": "deno install --frozen=false --entrypoint mdcommands/main_test.ts",
+    "install_minutesspent_main": "deno install --frozen=false --entrypoint minutesspent/main.ts",
+    "install_minutesspent_main_test": "deno install --frozen=false --entrypoint minutesspent/main_test.ts",
     "install": {
       "description": "Install dependencies for all entry points",
       "dependencies": [
         "install_dislodge_main",
         "install_dislodge_main_test",
         "install_mdcommands_main",
-        "install_mdcommands_main_test"
+        "install_mdcommands_main_test",
+        "install_minutesspent_main",
+        "install_minutesspent_main_test"
       ]
     },
     "lint": "deno lint .",
