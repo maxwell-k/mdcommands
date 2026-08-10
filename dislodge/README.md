@@ -9,7 +9,7 @@ Command to install from GitHub:
 
 <!--
 dislodge/README.md
-Copyright Keith Maxwell
+Copyright 2025 Keith Maxwell
 SPDX-License-Identifier: CC0-1.0
 -->
 
