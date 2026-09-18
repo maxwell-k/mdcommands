@@ -42,7 +42,7 @@ jobs:
           podman run "--volume=$PWD:/src:z" --workdir=/src commitlint/commitlint
           --verbose --from=origin/main --to=HEAD
   zizmor:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     # https://github.com/zizmorcore/zizmor-action#permissions
     permissions: { security-events: write }
     steps:
