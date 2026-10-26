@@ -10,6 +10,7 @@ path = [
   "dislodge/deno.json",
   "dislodge/deno.lock",
   "minutesspent/package.json",
+  "minutesspent/package-lock.json",
 ]
 SPDX-FileCopyrightText = "2026 Keith Maxwell <keith.maxwell@gmail.com>"
 SPDX-License-Identifier = "CC0-1.0"
