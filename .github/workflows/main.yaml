@@ -3,8 +3,7 @@
 # SPDX-License-Identifier: CC0-1.0
 
 on: # yamllint disable-line rule:truthy
-  push: { branches: [main] }
-  pull_request: { branches: [main] }
+  push:
   workflow_dispatch:
 
 permissions: {}
