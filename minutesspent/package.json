@@ -1,0 +1,21 @@
+{
+  "name": "minutesspent",
+  "version": "0.0.1",
+  "description": "Parse sentences about the number of minutes spent.",
+  "license": "MPL-2.0",
+  "author": "Keith Maxwell <keith.maxwell@gmail.com>",
+  "type": "module",
+  "main": "main.ts",
+  "engines": {
+    "node": ">=26"
+  },
+  "bin": {
+    "minutesspent": "./main.ts"
+  },
+  "scripts": {
+    "test": "node --test --experimental-test-coverage --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100"
+  },
+  "dependencies": {
+    "marked": "^18.1.1"
+  }
+}
