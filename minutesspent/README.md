@@ -1,15 +1,20 @@
 # minutesspent
 
+<!--
 Command to install from GitHub:
 
     deno install --global --allow-read --no-config \
         https://raw.githubusercontent.com/maxwell-k/mdcommands/main/minutesspent/main.ts
 
-Command to install from this directory on the local machine:
+-->
 
-    deno install --global --allow-read --no-config main.ts
+Command to install from this directory on your local machine:
 
-Deno will calculate the executable name from the directory name.
+    npm install --global .
+
+> [!WARNING]
+> The command above assumes compatible versions of Node.js and npm, plus write
+> access to your npm prefix directory — `npm config get prefix`.
 
 ## Example usage
 
