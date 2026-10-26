@@ -1,14 +1,7 @@
 # minutesspent
 
-<!--
-Command to install from GitHub:
 
-    deno install --global --allow-read --no-config \
-        https://raw.githubusercontent.com/maxwell-k/mdcommands/main/minutesspent/main.ts
-
--->
-
-Command to install from this directory on your local machine:
+Command to install from this directory:
 
     npm install --global .
 
