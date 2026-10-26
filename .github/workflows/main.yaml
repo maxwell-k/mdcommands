@@ -10,7 +10,7 @@ permissions: {}
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     defaults: { run: { working-directory: minutesspent } }
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -20,7 +20,7 @@ jobs:
       - run: npm ci
       - run: npm test
   deno:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with: { persist-credentials: false }
@@ -38,7 +38,7 @@ jobs:
     # yamllint disable-line rule:line-length
     uses: maxwell-k/dotlocalslashbin/.github/workflows/renovate.yaml@d1558d04ad82861ead2cce45fb850a05c47e4fc7 # v0.0.27
   commitlint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
