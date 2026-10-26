@@ -19,7 +19,7 @@
       ]
     },
     "lint": "deno lint .",
-    "test": "deno test --permission-set --coverage",
+    "test": "deno test --permission-set --coverage dislodge/main_test.ts  mdcommands/main_test.ts",
     "all": {
       "dependencies": ["install", "lint", "test"]
     }
